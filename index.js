@@ -14,10 +14,6 @@ app.use(bodyParser.json());
 
 app.use(flightRoute);
 
-app.use("/", (req, res, next) => {
-  res.render("form");
-});
-
 app.listen(3000, () => {
   console.log("Server running at PORT:3000");
 });
