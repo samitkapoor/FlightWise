@@ -13,32 +13,18 @@
 <body>
   <% console.log("TODAY:" + today.toString()); %>
   <div class="dark-filter">
-    <div class="left-col">
-      <h1><span class="short-text italic">Welcome to</span><br>Flight<span class="italic">WISE</span></h1>
-      <form autocomplete="off" action="/getPrices" method="POST">
-        <label for="source">Which city will you fly from?</label>
-        <input placeholder="Enter Source" name="source" type="text" id="source">
-        <p class="error" style=<%= sourceStyle %> id="source-error"><%= sourceError %></p>
-        <label for="destination">What is your destination?</label>
-        <input placeholder="Enter Destination" name="destination" type="text" id="destination">
-        <p class="error" style=<%= destinationStyle %> id="destination-error"><%= destinationError %></p>
-        <label for="date">When do you plan to fly?</label>
-        <input name="date" type="date" id="date" min="<%= today %>" value="<%= today %>">
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-    <div class="right-col">
-      <% if (isResult == true) { %>
-      <div class="legs">
-        <% for(const key in result) { %>
-        <div class="fare">
-          <p class="carrier"><%= key %></p>
-          <p class="charges"><%= result[key] %></p>
-        </div>
-        <% } %>
-      </div>
-      <% } %>
-    </div>
+    <h1><span class="short-text italic">Welcome to</span><br>Flight<span class="italic">WISE</span></h1>
+    <form autocomplete="off" action="/getPrices" method="POST">
+      <label for="source">Which city will you fly from?</label>
+      <input placeholder="Enter Source" name="source" type="text" id="source">
+      <p class="error" style=<%= sourceStyle %> id="source-error"><%= sourceError %></p>
+      <label for="destination">What is your destination?</label>
+      <input placeholder="Enter Destination" name="destination" type="text" id="destination">
+      <p class="error" style=<%= destinationStyle %> id="destination-error"><%= destinationError %></p>
+      <label for="date">When do you plan to fly?</label>
+      <input name="date" type="date" id="date" min="<%= today %>" value="<%= today %>">
+      <button type="submit">Submit</button>
+    </form>
   </div>
 </body>
 
