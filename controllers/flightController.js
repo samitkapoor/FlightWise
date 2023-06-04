@@ -67,6 +67,11 @@ module.exports.getHomePage = (req, res, next) => {
   }
 
   res.render("form", {
-    today: year + "-" + month + "-" + date
+    today: year + "-" + month + "-" + date,
+    sourceStyle: "",
+    sourceError: "",
+    destinationStyle: "",
+    destinationError: "",
+    result: {},
   });
 };

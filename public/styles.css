@@ -18,10 +18,29 @@ body {
 
   background: linear-gradient(to right, black, rgba(0, 0, 0, 0.281));
 
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+
+.left-col {
+  width: 50vw;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
+
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.right-col {
+  width: 50vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
 
   box-sizing: border-box;
   padding-left: 20px;
@@ -95,4 +114,47 @@ button[type="submit"]:hover {
 .error {
   color: red;
   display: none;
+}
+
+.legs {
+  height: 250px;
+  width: 30vw;
+
+  overflow-y: scroll;
+  padding: 5px 100px 5px 10px;
+
+  position: relative;
+}
+
+.legs::-webkit-scrollbar {
+  width: 5px;
+}
+
+.legs::-webkit-scrollbar-thumb {
+  background-color: blue;
+}
+
+.legs::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.fare {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  box-sizing: border-box;
+}
+
+.carrier,
+.charges {
+  font-weight: bold;
+  font-size: 26px;
+  color: rgb(124, 124, 224);
+}
+
+.charges {
+  font-size: 24px;
+  color: white;
 }
