@@ -11,6 +11,7 @@ const getIataCode = async (city, offset) => {
     .then((data) => {
       var cities = data["data"];
       cities.forEach((c) => {
+        // if entered city is valid then get its iatacode
         if (c["city_name"].toLowerCase().includes(city.toLowerCase())) {
           res = c["iata_code"];
         }

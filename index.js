@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
 
-const flightRoute = require("./routes/flightRoute");
+const flightRoutes = require("./routes/flightRoutes");
 
 const app = express();
 
@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(flightRoute);
+app.use(flightRoutes);
 
 app.listen(3000, () => {
   console.log("Server running at PORT:3000");

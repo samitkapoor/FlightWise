@@ -1,3 +1,4 @@
+// return today's date in yyyy-mm-dd format
 module.exports = () => {
   const d = new Date();
   var year = d.getFullYear().toString();
