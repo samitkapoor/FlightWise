@@ -4,17 +4,18 @@ const bodyParser = require("body-parser");
 
 const flightRoute = require("./routes/flightRoute");
 
-const getIataCode = require("./utils/getIataCode");
-
 const app = express();
 
+app.set("view engine", "ejs");
+
+app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(flightRoute);
 
 app.use("/", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "views", "form.html"));
+  res.render("form");
 });
 
 app.listen(3000, () => {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlightWISE</title>
+
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div class="dark-filter">
+    <h1><span class="short-text italic">Welcome to</span><br>Flight<span class="italic">WISE</span></h1>
+    <form autocomplete="off" action="/getPrices" method="POST">
+      <label for="source">Which city will you fly from?</label>
+      <input placeholder="Enter Source" name="source" type="text" id="source">
+      <label for="destination">What is your destination?</label>
+      <input placeholder="Enter Destination" name="destination" type="text" id="destination">
+      <label for="date">When do you plan to fly?</label>
+      <input name="date" type="date" id="date">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: system-ui;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background: url("https://wallpaperset.com/w/full/1/9/7/183261.jpg");
+}
+
+.dark-filter {
+  height: 100vh;
+  width: 100vw;
+
+  background: linear-gradient(to right, black, rgba(0, 0, 0, 0.281));
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+h1 {
+  color: white;
+  line-height: 0.5em;
+
+  font-size: 62px;
+}
+
+.italic {
+  color: blue;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.short-text {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+form {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: white;
+  font-weight: 600;
+
+  margin-bottom: 2px;
+}
+
+input {
+  margin-bottom: 10px;
+  width: 250px;
+  padding: 2px 5px 2px 5px;
+
+  border-radius: 5px;
+
+  border: none;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: blue;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 2px 5px 2px 5px;
+
+  color: white;
+
+  font-size: 15px;
+
+  margin-top: 12px;
+
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(90, 90, 255);
+}
