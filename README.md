@@ -4,7 +4,7 @@ A Node.js application that provides you the prices of the flights from source ci
 
 # Preview 
 
-https://github.com/samitkapoor/FlightWise/assets/77121931/2a669035-7df7-4239-b5d1-e7eab1380472
+https://github.com/samitkapoor/FlightWise/assets/77121931/827c778e-49d5-424e-af2b-a72353ff21c6
 
 This project used 2 APIs to fetch the details of the flights between two cities
 - Skyscanner API : 
