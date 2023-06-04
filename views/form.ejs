@@ -28,12 +28,16 @@
       </form>
     </div>
     <div class="right-col">
+      <% if (isResult == true) { %>
       <div class="legs">
+        <% for(const key in result) { %>
         <div class="fare">
-          <p class="carrier">Air Asia</p>
-          <p class="charges">4,514</p>
+          <p class="carrier"><%= key %></p>
+          <p class="charges"><%= result[key] %></p>
         </div>
+        <% } %>
       </div>
+      <% } %>
     </div>
   </div>
 </body>
