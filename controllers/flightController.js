@@ -24,7 +24,7 @@ module.exports.getPrice = async (req, res, next) => {
 
   // if sourceCode is empty, then it means there is some error in the city entered by the user so we go back to the form page with the error
   if (sourceCode == "") {
-    res.render("form", {
+    res.render("form.ejs", {
       today: getToday(),
       sourceStyle: "display:block;",
       sourceError: "Please enter correct source city",
@@ -46,7 +46,7 @@ module.exports.getPrice = async (req, res, next) => {
   console.log(destinationCode);
 
   if (destinationCode == "") {
-    res.render("form", {
+    res.render("form.ejs", {
       today: getToday(),
       sourceStyle: "",
       sourceError: "",
@@ -85,7 +85,7 @@ module.exports.getPrice = async (req, res, next) => {
   console.log(result);
 
   if (result != {}) {
-    res.render("result", {
+    res.render("result.ejs", {
       source: sourceCode,
       destination: destinationCode,
       today: date,
@@ -95,7 +95,7 @@ module.exports.getPrice = async (req, res, next) => {
   } else {
     // if the program reaches to this point then it means that the result object is empty, which is possible when there were no flights present
     // from source to destination at given date, this is possible when the date is way ahead of today and the flights are maybe not scheduled for that day yet.
-    res.render("result", {
+    res.render("result.ejs", {
       source: sourceCode,
       destination: destinationCode,
       today: date,
@@ -106,7 +106,7 @@ module.exports.getPrice = async (req, res, next) => {
 };
 
 module.exports.getHomePage = (req, res, next) => {
-  res.render("form", {
+  res.render("form.ejs", {
     today: getToday(),
     sourceStyle: "",
     sourceError: "",
