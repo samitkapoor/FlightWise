@@ -1,7 +1,7 @@
 // get iata code
 // iata code is used in the api to fetch the details of the flights
 const getIataCode = async (city, offset) => {
-  const api = `http://api.aviationstack.com/v1/cities?access_key=9779153bacffbdcc5386660859fc93b3&limit=1000&offset=${offset}`;
+  const api = `http://api.aviationstack.com/v1/cities?access_key=ab946d69a22d85397e0d57c9be6fa6b8&limit=1000&offset=${offset}`;
   var res = null;
 
   await fetch(api, {
